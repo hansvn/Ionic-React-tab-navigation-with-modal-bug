@@ -32,6 +32,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Page1 from './pages/Page1';
 
 const App: React.FC = () => (
   <IonApp>
@@ -44,9 +45,10 @@ const App: React.FC = () => (
           <Route exact path="/tab2">
             <Tab2 />
           </Route>
-          <Route path="/tab3">
+          <Route exact path="/tab3">
             <Tab3 />
           </Route>
+          <Route path="/tab3/page1" component={Page1} />
           <Route exact path="/">
             <Redirect to="/tab1" />
           </Route>
